@@ -19,11 +19,11 @@ print(report)
 
 # Part 2
 
-player = "Frank Rijkaard"
-first_name = player[:5]
-last_name_len = len(player[6:])
+player = "Erwin Koeman"
+first_name = player[:player.find(" ")]
+last_name_len = len(player[player.find(" "):]) - 1
 print(last_name_len)
-name_short = f'{player[0]}. {player[6:]}'
+name_short = f'{player[0]}.{player[player.find(" "):]}'
 print(name_short)
 chant = (first_name + "! ") * (len(first_name) - 1) + (first_name + "!")
 print(chant)
